@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, BookOpenCheck } from "lucide-react";
+import { ChevronDown, Menu, Monitor } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -32,7 +32,13 @@ export function HeaderClient({ academicChildren }: { academicChildren: NavChild[
     { label: "Home", children: [{ title: "Dean's Message", href: "/dean-message" }, { title: "Vision & Mission", href: "/vision-mission" }] },
     { label: "About", children: [{ title: "Facilities", href: "/about/facilities" }, { title: "Faculty History", href: "/about/history" }] },
     { label: "Academic", children: academicChildren },
-    { label: "Research", href: "/research" },
+    { 
+      label: "Research", 
+      children: [
+        { title: "Journals", href: "/research/journal" },
+        { title: "Theses", href: "/research/thesis" }
+      ] 
+    },
     { label: "Staff", href: "/staff" },
     { label: "Contact", href: "/contact" },
   ];
@@ -42,9 +48,9 @@ export function HeaderClient({ academicChildren }: { academicChildren: NavChild[
       <div className="max-w-[1440px] mx-auto flex items-center justify-between py-4 px-6 md:px-10">
         <Link href="/" className="flex items-center gap-3">
           <div className="text-[#BF833D] w-8 h-8 md:w-10 md:h-10">
-            <BookOpenCheck aria-hidden="true" className="w-full h-full" />
+            <Monitor aria-hidden="true" className="w-full h-full" />
           </div>
-          <span className="font-black text-[12px] uppercase tracking-tighter text-[#1F2E4F]">Faculty of Shari'a & Leadership</span>
+          <span className="font-black text-[12px] uppercase tracking-tighter text-[#1F2E4F]">Faculty of Computer & IT</span>
         </Link>
 
         <NavigationMenu className="hidden lg:flex">
