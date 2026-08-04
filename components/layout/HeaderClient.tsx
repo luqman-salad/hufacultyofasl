@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { FaScaleBalanced } from "react-icons/fa6";
 
 export interface NavChild {
   title: string;
@@ -47,11 +48,11 @@ export function HeaderClient({ academicChildren }: { academicChildren: NavChild[
     <header className="w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between py-4 px-6 md:px-10">
         <Link href="/" className="flex items-center gap-3">
-          <div className="text-[#BF833D] w-8 h-8 md:w-10 md:h-10">
-            <Monitor aria-hidden="true" className="w-full h-full" />
-          </div>
-          <span className="font-black text-[12px] uppercase tracking-tighter text-[#1F2E4F]">Faculty of Computer & IT</span>
-        </Link>
+        <div className="text-[#BF833D] w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-2xl md:text-3xl">
+          <FaScaleBalanced aria-hidden="true" />
+        </div>
+        <span className="font-black text-[12px] uppercase tracking-tighter text-[#1F2E4F]">Faculty of Shari'a &amp; Leadership</span>
+      </Link>
 
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="gap-1">
